@@ -43,12 +43,12 @@ public class StockTradingPlatform {
                     if (balance >= cost) {
                         balance -= cost;
                         portfolio.put(stock, portfolio.getOrDefault(stock, 0) + qty);
-                        System.out.println("✅ Bought " + qty + " shares of " + stock);
+                        System.out.println(" Bought " + qty + " shares of " + stock);
                     } else {
-                        System.out.println("❌ Not enough balance.");
+                        System.out.println(" Not enough balance.");
                     }
                 } else {
-                    System.out.println("❌ Stock not found.");
+                    System.out.println(" Stock not found.");
                 }
 
             } else if (choice == 3) {
@@ -61,9 +61,9 @@ public class StockTradingPlatform {
                 if (owned >= qty) {
                     balance += prices.get(stock) * qty;
                     portfolio.put(stock, owned - qty);
-                    System.out.println("✅ Sold " + qty + " shares of " + stock);
+                    System.out.println(" Sold " + qty + " shares of " + stock);
                 } else {
-                    System.out.println("❌ You don’t own enough shares.");
+                    System.out.println(" You don’t own enough shares.");
                 }
 
             } else if (choice == 4) {
@@ -73,14 +73,14 @@ public class StockTradingPlatform {
                     double value = prices.get(s) * qty;
                     System.out.println(s + ": " + qty + " shares → ₹" + value);
                 }
-                System.out.println("💰 Balance: ₹" + balance);
+                System.out.println(" Balance: ₹" + balance);
 
             } else if (choice == 5) {
-                System.out.println("👋 Exiting. Thank you!");
+                System.out.println(" Exiting. Thank you!");
                 break;
 
             } else {
-                System.out.println("❗ Invalid choice. Try again.");
+                System.out.println(" Invalid choice. Try again.");
             }
         }
 
